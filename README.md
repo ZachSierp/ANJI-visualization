@@ -1,7 +1,7 @@
 # ANJI Visualization
 
 ## What is ANJI-visualization?
-ANJI-visualization is a Linux-based plotting tool for ANJI Neural Networks and is built around the specific format of ANJI output directories and XML data files. It was created by Zach Sierp to assist in the performance evaluation of Neural Networks evolved using ANJI.
+ANJI-visualization is a plotting tool for ANJI Neural Networks and is built around the specific format of ANJI output directories and XML data files. It was created by Zach Sierp to assist in the performance evaluation of Neural Networks evolved using ANJI.
 
 ## Using ANJI-Visualization
 The visualization tool can be used directly from the command line. The program requires **at least two** inputs:
@@ -18,7 +18,7 @@ Two experiment directories can be given to the program for performance compariso
 $python xparse.py your_config.ini directory#1 directory#2
 ```
 
-Again, the order of the input config file and directories do not matter.
+Again, the order of the input config file and directories does not matter.
 
 ## Example Plot Outputs
 ![alt text](/Example_Plots/aggregate_plots/jasoyode_2017-04-27_cpg_10_4_arch_act_bias_NO_CHOMOSOMES_Max_Fitness_aggregate.png "Aggregate Max Fitness Plot")
