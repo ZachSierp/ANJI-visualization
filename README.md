@@ -13,7 +13,12 @@ To run the program *(the order of the config file and directory do not matter)*:
 $python xparse.py your_config.ini your_directory
 ```
 
-Two experiment directories can be given to the program for performance comparisons using standard deviation and significance.
+Two experiment directories can be given to the program for performance comparisons using standard deviation and significance:
+```
+$python xparse.py your_config.ini directory#1 directory#2
+```
+
+Again, the order of the input config file and directories do not matter.
 
 ## Example Plot Outputs
 ![alt text](/Example_Plots/aggregate_plots/jasoyode_2017-04-27_cpg_10_4_arch_act_bias_NO_CHOMOSOMES_Max_Fitness_aggregate.png "Aggregate Max Fitness Plot")
