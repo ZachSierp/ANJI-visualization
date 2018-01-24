@@ -55,18 +55,19 @@ random.seed()
 # we will need to clear the list at the end of every function in which it is used, or we will fill the list with all possible color values and have an error
 colors_in_use = []
 
-def load(show, save, path, epoch, input_format, use_legend, simplify_legend, plot_groups, input_groups=None, input_colors=None, name=None, off_set=0, shaded=False, bar_graphs=False, b_ecolor=None, ls='solid'):
-    # setup all of the important plotting information using the variables passed by the xparse file
+# take the config file from xparse.py and load up the global variables with the config values
+def load(conf):
+	# setup all of the important plotting information using the variables passed by the xparse file
     global show_plots, show_legend, save_path, save_plots, epoch_modifier, formats, line_format, point_size, offset, agg_ls
     global cap_size, transparency, groups, simple_legend, group_agg, custom_colors, list_of_colors, num_colors, custom_name, shaded_region, show_bar_graphs, bar_ecolor
 
-    offset = off_set
-    shaded_region = shaded
-    show_bar_graphs = bar_graphs
-    agg_ls = ls
+    offset = conf.offset
+    shaded_region = conf.shaded_region
+    show_bar_graphs = conf.bar_graphs
+    agg_ls = conf.agg_ls
 
     try:
-        c = b_ecolor.strip('()')
+        c = conf.bar_ecolor.strip('()')
         c = c.split(',')
         for i in range(len(c)):
             val = c[i].strip()
@@ -77,18 +78,18 @@ def load(show, save, path, epoch, input_format, use_legend, simplify_legend, plo
     except:
         pass
 
-    if name is not None:
-        custom_name = name
-    if input_colors is not None:
+    if conf.custom_name is not None:
+        custom_name = conf.custom_name
+    if conf.colors is not None:
         custom_colors = True
-        list_of_colors = input_colors
-    groups = input_groups
+        list_of_colors = conf.colors
+    groups = conf.properties_groups
     if groups is not None:
         num_colors = len(groups)
         assign_param_colors()
-        group_agg = plot_groups
+        group_agg = conf.plot_groups
 
-    show_plots = show
+    show_plots = conf.show_plots
     if not show_plots:
         matplotlib.use('Agg')
     else:
@@ -97,17 +98,17 @@ def load(show, save, path, epoch, input_format, use_legend, simplify_legend, plo
             plt.close('all')
         except:
             quit(1)
-        
-    show_legend = use_legend
-    simple_legend = simplify_legend
-    save_plots = save
-    save_path = path
-    epoch_modifier = epoch
+
+    show_legend = conf.use_legend
+    simple_legend = conf.simple_legend
+    save_plots = conf.save_plots
+    save_path = conf.save_path
+    epoch_modifier = conf.epoch_modifier
     # array of formatting information
     #[bool, int, int, int, int]
     # [continuous_lines, point_size, cap_size]
-    formats = input_format
-    
+    formats = conf.get_plot_format()
+
     # ensure that save_path ends with a '/'
     if not save_path.endswith('/'):
         save_path += '/'
@@ -117,7 +118,7 @@ def load(show, save, path, epoch, input_format, use_legend, simplify_legend, plo
         line_format += '-'
     # this is the default point format regardless of continuous lines
     line_format += 'o'
-   
+
     # ensure we have a non default value for other inputs
     if len(formats) > 1:
         if int(formats[1]) > 0:
@@ -184,7 +185,7 @@ def get_custom_color(idx):
             print("INVALID COLOR %s HAS BEEN ENTERED. ACCESSING NEXT COLOR" % list_of_colors[idx + color_offset])
             color_offset += 1
             return get_custom_color(idx)
-            
+
 
 # function returns normalized (r, g, b) tuple for color plotting
 def get_color():
@@ -224,7 +225,7 @@ def get_significance(first_ary, second_ary):
             p_values.append(1-p)
         except:
             p_values.append(0)
-    
+
     return p_values
 
 
@@ -319,7 +320,7 @@ def plot_bar_graph(title, save_loc, filename, vals, labels, colors, devs, data_t
             rect_num += 1
 
         rect_num = 0
-            
+
         ax.set_ylabel(data_type)
         ax.set_title(title)
         ax.set_xticks(N)
@@ -327,7 +328,7 @@ def plot_bar_graph(title, save_loc, filename, vals, labels, colors, devs, data_t
         # rotate every label on the graph
         for tick in ax.get_xticklabels():
             tick.set_rotation(45)
-        
+
         for i in range(len(rects)):
             rect = rects[i]
             height = rect.get_height()
@@ -359,10 +360,10 @@ def plot_groups(ary, xvals, data_type, name):
     maindir = get_experiment_dir(name)
     # check to see if there is a custom name. If so, reassigne name to use it.
     if custom_name is not None:
-        name = custom_name     
+        name = custom_name
     title = name + ' ' + data_type
     save_location = "%ssubgroup_plots/" % maindir
-    filename = data_type + '_deviation'  
+    filename = data_type + '_deviation'
     # ary is passed as tuple of (data, summary)
     counter = 0
     if show_bar_graphs:
@@ -389,7 +390,7 @@ def plot_groups(ary, xvals, data_type, name):
             plt.plot(xvals + (counter * offset), average, color=plot_color, label=label)
             plt.fill_between(xvals + (counter * offset), average-deviation, average+deviation, color=plot_color, alpha = 0.1)
         counter += 1
-        
+
         if show_bar_graphs:
             bar_avg = average[len(average)-1]
             bar_dev = deviation[len(deviation)-1]
@@ -397,7 +398,7 @@ def plot_groups(ary, xvals, data_type, name):
             bar_labels.append(label)
             bar_colors.append(plot_color)
             bar_deviation.append(bar_dev)
-            
+
 
     if show_legend:
         plt.legend(loc='best')
@@ -435,7 +436,7 @@ def plot_single_experiment_aggregate_data(ary, data_type, name, job_summaries):
         # add x values by epoch
         for i in range(1, len(ary[0])):
             xlist.append(i * epoch_modifier)
-    
+
     if len(job_summaries) == 0:
         for i in range(0, len(ary)):
             job_summaries.append('')
@@ -456,7 +457,7 @@ def plot_single_experiment_aggregate_data(ary, data_type, name, job_summaries):
         style = agg_ls
         if simple_legend:
             # make sure we can access the next plot color to avoid errors
-            try: 
+            try:
                 # if the next data_set has the same color, we dont want to put down the label yet
                 if get_param_color(job_summaries[i+1]) == plot_color:
                     ax.plot(xlist, data_set, color=plot_color, ls=style)
@@ -495,7 +496,7 @@ def plot_single_experiment_aggregate_data(ary, data_type, name, job_summaries):
 
     # show and save plot
     if save_plots:
-        plt.savefig(save_location + filename) 
+        plt.savefig(save_location + filename)
         print('New file "%s" saved to "%s"' % (filename, save_location))
     if show_plots:
         plt.show()
@@ -527,7 +528,7 @@ def plot_std_deviation(data_ary, dev_ary, label, name):
     plt.errorbar(xlist, data_ary, yerr=dev_ary, fmt=line_format, markersize=point_size, capsize=cap_size, label=label)
     # check to see if there is a custom name
     if custom_name is not None:
-        name = custom_name     
+        name = custom_name
     plt.title(name)
     if show_legend:
         plt.legend(loc='best')
@@ -552,10 +553,10 @@ def plot_all_mean_comparison(list_of_means, labels, data_type, name):
 
     for i in range(0, len(list_of_means)):
         plt.plot(xlist, list_of_means[i], label=labels[i])
-   
+
     # check for a custom name
     if custom_name is not None:
-        name = custom_name 
+        name = custom_name
     plt.title(name)
     if show_legend:
      plt.legend(loc='best')
@@ -569,7 +570,7 @@ def plot_all_mean_comparison(list_of_means, labels, data_type, name):
     plt.close('all')
 
 # first_data is an array of the averages of the first experiment, first_dev is an array of the deviation values for that experimen
-# first_aggregate is the "x_by_jobs" data array of the first experiment, a 2D array of all values of given type. This is 
+# first_aggregate is the "x_by_jobs" data array of the first experiment, a 2D array of all values of given type. This is
 # necessary for calculating significance.
 # first_label is the label of the first experiment line; holds true for all variables of "second_x" type
 # show_significance variable determines whether or not we calculate the significance and plot the significance
@@ -668,7 +669,7 @@ def plot_deviation_comparison(first_data, first_dev, first_label,
 
         plt.close('all')
 
-# take a list of averages, deviations, and labels, and plot a comparison of each as a standard deviation 
+# take a list of averages, deviations, and labels, and plot a comparison of each as a standard deviation
 def plot_mean_deviation_comparison(averages, deviations, labels, name, title):
     maindir = get_experiment_dir(name)
     save_location = '%smean_comparison/' % maindir
@@ -696,4 +697,4 @@ def plot_mean_deviation_comparison(averages, deviations, labels, name, title):
     if show_plots:
         plt.show()
 
-    plt.close('all') 
+    plt.close('all')

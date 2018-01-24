@@ -2,6 +2,8 @@ import os
 import xml.etree.cElementTree as ET
 import numpy as np
 import re
+from specie import Specie
+from parse_XML import parse
 
 
 class Experiment:
@@ -43,14 +45,14 @@ class Experiment:
         self.species_by_job = [] # Contains all the species values per job
         self.average_max_species = [] # average arrays for the percent above threshold
         self.average_min_species = []
-        self.average_avg_species = [] 
+        self.average_avg_species = []
 
         self.average_max_fitness = None # 1D array to store the average maximum fitness, calculated using all jobs
         self.average_min_fitness = None # 1D array to store the average minimum fitness values, calculated from all jobs
         self.average_avg_fitness = None # 1D array to store the average of teh average fitness values, calculated from all jobs
 
         self.average_champ_complexity = None  # Like average_max_fitness but with champion complexity
-        self.average_max_complexity = None # 1D array to store the average maximum complexity 
+        self.average_max_complexity = None # 1D array to store the average maximum complexity
         self.average_min_complexity = None # 1D array to store the average minimum complexity
         self.average_avg_complexity = None # 1D array to store the average of the average complexity
 
@@ -62,7 +64,7 @@ class Experiment:
         self.max_complexity_deviation = None
         self.min_complexity_deviation = None
         self.avg_complexity_deviation = None
-	
+
         # create an array to store each jobs properties #SUMMARY
         self.job_summaries = []
 
@@ -97,127 +99,6 @@ class Experiment:
             new_line += s
         # add string to job_summaries for later use
         self.job_summaries.append(new_line)
- 
-    def parse(self, job_count):
-	# loop throught the number of jobs and parse each filepath
-        for i in range(1, job_count):
-	    # we do not want to alter our original source filepath, so we create a local variable
-            curr_dir = self.source_file
-            curr_props = self.properties_file
-            # if we are using label props, gather properties data
-            if self.label_props:
-                self.parse_properties(curr_props, i)
-	    # we need to add the job directory so we can access the xml file
-            curr_dir += 'job_%i/run/' % i
-            # get the complete file path of the working xml file
-            path = os.path.join(curr_dir, 'run0.xml')
-            # setup the tree
-            tree = ET.parse(path)
-
-            # get the root of the tree
-            root = tree.getroot()
-
-            # array of all the maximum fitness values in the document
-            max_fitvals = []
-            # array of all the minimum fitness values in the doc
-            min_fitvals = []
-            # array of all the average fitness values in the doc
-            avg_fitvals = []
-
-            # array of all the champion complexity values in the document
-            champ_compvals = []
-            # array of all the maximum complexity values in the document
-            max_compvals = []
-            # array of all the minimum complexity values in the document
-            min_compvals = []
-            # array of all the average complexity values in the document
-            avg_compvals = []
-
-            # array of species for this job
-            job_species = []
-
-            # keep track of whether or not we are at the proper epoch to pull or skip information
-            epoch_index = 0
-            if self.generation_count is None:
-                # search paramaters contains all the information on population size and generation size
-                search_parameters = root.findall('search-parameters')
-                # look at search-paramaters to get the given generation size
-                for param in search_parameters:
-                    for child in param.getchildren():
-                        if child.tag == 'generations':
-                           self.generation_count = int(child.text)
-            # get all the generation elements so we can walk through them and process data
-            gen_list = root.findall('generation')
-            # get the last generation element so we can check it and make sure we dont miss the final data point, regardless of epoch modifier
-            last_gen = gen_list[-1]
-
-	    # go through each generation tag in the xml file for parsing
-            for generation in gen_list:
-                # need to create a list of species for this generation
-                gen_species = []
-                # check to see if we are a multiple of the epoch modifier
-                if epoch_index % self.epoch_modifier == (self.epoch_modifier - 1) or epoch_index == 0 or generation == last_gen:
-                    # loop through the generation elements subchildren to find fitness and complexity
-                    for genchild in generation.getchildren():
-                        # identify fitness element using .tag
-                        if genchild.tag == 'fitness':
-                            # loop through children of fitness to find the max fitness
-                            for fitchild in genchild:
-                                # check if element is max using .tag
-                                if fitchild.tag == 'max':
-                                    # add the value of the max fitness to the array
-                                    max_fitvals.append(int(fitchild.text))
-                                # check if element is min
-                                if fitchild.tag == 'min':
-                                    min_fitvals.append(int(fitchild.text))
-                                # check if element is avg
-                                if fitchild.tag == 'avg':
-                                    avg_fitvals.append(float(fitchild.text))
-			# repeat above process for complexity
-                        if genchild.tag == 'complexity':
-                            for compchild in genchild:
-                                if compchild.tag == 'champ':
-                                    champ_compvals.append(int(compchild.text))
-                                # check if element is max
-                                if compchild.tag == 'max':
-                                    max_compvals.append(int(compchild.text))
-                                # check if element is min
-                                if compchild.tag == 'min':
-                                    min_compvals.append(int(compchild.text))
-                                # check if element is avg
-                                if compchild.tag == 'avg':
-                                    avg_compvals.append(float(compchild.text))
-                        # get the species of the experiment
-                        if genchild.tag == 'specie':
-                            # create a new specie and add it to the list of species for this generation
-                            specie = Specie(genchild.get('id'), genchild.get('count'))
-                            # loop through the chromosomes in the specie and create add them to the specie list of chromosomes
-                            for schild in genchild:
-                                specie.add_chromosome(schild.get('id'), schild.get('fitness'))
-                                
-                            gen_species.append(specie)
-
-                    # increment the epoch_index after we've pulled the data
-                    epoch_index += 1
-                else:
-                    # even if we don't pull data we still want to increment the epoch_index to keep track of where we are
-                    epoch_index += 1
-                # need to add the list of this generations species to the list of this jobs species by generation
-                if len(gen_species) > 0:
-                    job_species.append(gen_species)
-	    # add parsed values to global arrays declared in the init function
-            self.max_fit_by_job.append(max_fitvals)
-            self.min_fitness_by_job.append(min_fitvals)
-            self.avg_fitness_by_job.append(avg_fitvals)
-           
-            self.champ_comp_by_job.append(champ_compvals)
-            self.max_comp_by_job.append(max_compvals)
-            self.min_comp_by_job.append(min_compvals)
-            self.avg_comp_by_job.append(avg_compvals)
-
-            self.species_by_job.append(job_species)
-
-            # prase data from xml file and add it to appropriate array
 
     # walk_dir : File -> Null
     # pulls data from xml files and adds it to arrays for later calculation
@@ -237,15 +118,15 @@ class Experiment:
                     job_count += 1
 
         if job_count > 1:
-            self.parse(job_count)
+            parse(self, job_count)
         else:
             print("No jobs detected in %s" % input_directory)
             quit(1)
-    
+
     # get aggregate arrays for correction
     def get_aggregates(self):
         return [self.max_fit_by_job, self.min_fitness_by_job, self.avg_fitness_by_job, self.champ_comp_by_job, self.max_comp_by_job, self.min_comp_by_job, self.avg_comp_by_job]
- 
+
     # return a list of all arrays containing averages for correction in xparse.py
     def get_average_arrays(self):
         return [self.average_max_fitness, self.average_min_fitness, self.average_avg_fitness, self.average_champ_complexity, self.average_max_complexity, self.average_min_complexity, self.average_avg_complexity]
@@ -253,7 +134,7 @@ class Experiment:
     # return a list of all deviation arrays for correction in xparse.py
     def get_deviation_arrays(self):
         return [self.max_fitness_deviation, self.min_fitness_deviation, self.avg_fitness_deviation, self.champ_complexity_deviation, self.max_complexity_deviation, self.min_complexity_deviation, self.avg_complexity_deviation]
-            
+
     def correct_outlier(self, array, count):
         # get the final value of the array
         final_value = array[-1]
@@ -290,9 +171,9 @@ class Experiment:
 
     def calculate_data(self):
         # index 0 - 2 == fitness, 3 - 6 == complexity
-        to_be_np = [self.max_fit_by_job, self.min_fitness_by_job, self.avg_fitness_by_job, 
+        to_be_np = [self.max_fit_by_job, self.min_fitness_by_job, self.avg_fitness_by_job,
                       self.champ_comp_by_job, self.max_comp_by_job, self.min_comp_by_job, self.avg_comp_by_job]
-        
+
         # find the correct number of generations
         correct_generations = int(self.generation_count/self.epoch_modifier) + 1
         # check to see if we have any jobs with missing data. Automatically corrects them if there are
@@ -357,48 +238,3 @@ class Experiment:
                 count_by_gen.append(len(gen))
             count_by_job.append(count_by_gen)
         return count_by_job
-            
-
-# class to store species data. Experiment will create a 2D list of species, where index is a generation, and at each generation is a list of species
-class Specie:
-    def __init__(self, id_num, count):
-        # id number to distinguis individual species
-        self.id_num = int(id_num)
-        # count from xml file indicating the number of chromosomes within that species
-        self.count = int(count)
-        # list of chromosomes, stored as tuples(id_num, fitness)
-        self.chromosomes = []
-
-    # takes an id number and a fitness value and adds a chromosome tuple to the list of chromosomes, self.chromosomes
-    def add_chromosome(self, id_num, fitness):
-        self.chromosomes.append((int(id_num), int(fitness)))
-
-    # takes an id number and returns the corresponding chromosome tuple
-    def get_chromosome(self, id_num):
-        for chromosome in self.chromosomes:
-            if chromosome[0] == id_num:
-                return chromosome
-
-    # takes no arguments, returns the greatest fitness value from self.chromosomes
-    def get_max_chromosome_fitness(self):
-        max_val = 0
-        for chromosome in self.chromosomes:
-            if chromosome[1] > max_val:
-                max_val = chromosome[1]
-        return max_val
-
-    # takes no arguments, calculates and returns the average fitness of the chromosomes in this species
-    def get_avg_chromosome_fitness(self):
-        total_fit = 0
-        for chromosome in self.chromosomes:
-            total_fit += chromosome[1]
-        average = float(total_fit/len(self.chromosomes))
-        return average
-
-    # takes no arguments, returns the minimum fitness of the chromosomes in this species
-    def get_min_chromosome_fitness(self):
-        min_fit = self.chromosomes[0][1]
-        for chromosome in self.chromosomes:
-            if chromosome[1] < min_fit:
-                min_fit = chromosome[1]
-        return min_fit

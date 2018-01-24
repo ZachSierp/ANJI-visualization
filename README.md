@@ -1,7 +1,7 @@
 # ANJI Visualization
 
 ## What is ANJI-visualization?
-ANJI-visualization is a plotting tool for ANJI Neural Networks and is built around the specific format of ANJI output directories and XML data files. It was created by Zach Sierp to assist in the performance evaluation of Neural Networks evolved using ANJI.
+ANJI-visualization is a plotting tool for ANJI Neural Networks and is built around the specific format of ANJI output directories and XML data files. It was created to assist in the performance evaluation of Neural Networks evolved using ANJI.
 
 ## Using ANJI-Visualization
 The visualization tool can be used directly from the command line. The program requires **at least two** inputs:

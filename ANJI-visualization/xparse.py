@@ -44,7 +44,7 @@ for i in range(1, len(sys.argv)):
 # divisible by the modifier
 # epoch_modifier = 5  epoch modifier should be specified from config file
 
-plot.load(c.show_plots, c.save_plots, c.save_path, c.epoch_modifier, plot_formats, c.use_legend, c.simple_legend, c.plot_groups, c.properties_groups, c.colors, c.custom_name, c.offset, c.shaded_region, c.bar_graphs, c.bar_ecolor, c.agg_ls)
+plot.load(c)
 
 #create list of all the graph labels
 labels = ['Max Fitness', 'Minimum Fitness', 'Average Fitness', 'Champion Complexity', 'Max Complexity', 'Minimum Complexity', 'Average Complexity']
@@ -70,14 +70,14 @@ for i in range(0, len(experiments)):
             plot.plot_std_deviation(averages[j], deviations[j], labels[j], name)
         else:
             continue
-    
+
     # plot all mean fitness values
     if c.plot_mean_fitness_vals:
-        plot.plot_all_mean_comparison([averages[0], averages[1], averages[2]], 
+        plot.plot_all_mean_comparison([averages[0], averages[1], averages[2]],
                                       ['Mean Max Fitness', 'Mean Min Fitness', 'Mean Avg Fitness'], 'Fitness', name)
     # plot all mean comp values
     if c.plot_mean_comp_vals:
-        plot.plot_all_mean_comparison([averages[3], averages[4], averages[5], averages[6]], 
+        plot.plot_all_mean_comparison([averages[3], averages[4], averages[5], averages[6]],
                                        ['Mean Champ Complexity', 'Mean Max Complexity', 'Mean Min Complexity', 'Mean Avg Complexity'], 'Complexity', name)
 
     # plot the species data
@@ -102,7 +102,7 @@ for i in range(0, len(experiments)):
             continue
     if c.show_aggregate_species:
         plot.plot_mean_deviation_comparison(species_avgs, species_devs, ["max", "min", "avg"], e.name, "species_comparison_above_threshold")
- 
+
     # if we are on an odd number experiment we have more than 1 experiment and need to plot comparisons
     if i%2 == 1:
         first = experiments[i]
@@ -124,7 +124,7 @@ for i in range(0, len(experiments)):
                 second_averages[i] = second.correct_outlier(second_averages[i], first_length)
                 second_deviations[i] = second.correct_outlier(second_deviations[i], first_length)
                 second.find_outliers(second_aggregates, first_length)
-                # print(len(averages[i])) 
+                # print(len(averages[i]))
         elif second_length > first_length:
             for i in range(0, len(first_averages)):
                 first_averages = first.correct_outlier(first_averages[i], second_length)
@@ -134,7 +134,7 @@ for i in range(0, len(experiments)):
         plot_options = c.get_deviation_plot_options()
 
         plot_names = ['Max Fitness', 'Minimum Fitness', 'Average Fitness', 'Champion Complexity', 'Max Complexity', 'Minimum Complexity', 'Average Complexity']
-        for i in range(len(plot_options)): 
+        for i in range(len(plot_options)):
         # plot the comparison standard deviation between the current experiment and previous
             if plot_options[i]:
                 plot.plot_deviation_comparison(first_averages[i], first_deviations[i], first.name, second_averages[i], second_deviations[i], second.name, first_aggregates[i], second_aggregates[i], c.plot_significance, plot_names[i])
