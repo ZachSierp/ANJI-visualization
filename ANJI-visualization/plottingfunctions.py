@@ -333,8 +333,7 @@ def plot_bar_graph(title, save_loc, filename, vals, labels, colors, devs, data_t
             rect = rects[i]
             height = rect.get_height()
             ax.text(rect.get_x() + rect.get_width()/2., height + bar_deviation[i],
-                '%c%d' % (ord(u"\u00B1"),  bar_deviation[i]),
-                ha='center', va='bottom')
+                '%c%d' % (unichr(177),  bar_deviation[i]), ha='center', va='bottom')
             ax.text(rect.get_x(), height, '%d' % height, ha='center', va='bottom')
 
         # fig.set_size_inches(8, 8)
