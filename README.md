@@ -12,4 +12,5 @@ $python xparse.py your_config.ini your_directory
 
 ## Example Plot Outputs
 ![alt text](/Example_Plots/aggregate_plots/jasoyode_2017-04-27_cpg_10_4_arch_act_bias_NO_CHOMOSOMES_Max_Fitness_aggregate.png "Aggregate Plot")
+
 ![alt text](/Example_Plots/subrougp_plots/Max_Fitness_deviation.png "Subgroup Plot")
