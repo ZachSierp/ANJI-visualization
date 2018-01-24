@@ -1,0 +1,4 @@
+<chromosome id="24364" primary-parent-id="23885">
+<gasneat-neuron id="0" type="in" activation="linear" threshold="0.0" gas-prod-type="0" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="20" y="20" A="1.0" B="-0.5" C="1.0" D="0.25" LR="1.0" emiss-rate="0.24868768410099007" emiss-radius="300"/>
+<gasneat-neuron id="1" type="out" activation="linear" threshold="0.0" gas-prod-type="0" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="200" y="20" A="1.0" B="-0.5" C="1.0" D="0.25" LR="1.0" emiss-rate="0.034114650360469845" emiss-radius="300"/>
+</chromosome>

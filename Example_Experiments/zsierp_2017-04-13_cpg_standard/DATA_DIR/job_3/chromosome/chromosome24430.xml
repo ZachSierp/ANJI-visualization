@@ -1,0 +1,14 @@
+<chromosome id="24430" primary-parent-id="21949">
+<gasneat-neuron id="0" type="in" activation="linear" threshold="0.0" gas-prod-type="0" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="20" y="20" A="0.36833685461879695" B="-0.5" C="-0.5" D="0.25" LR="1.0" emiss-rate="0.11073586885866947" emiss-radius="300"/>
+<gasneat-neuron id="1" type="out" activation="linear" threshold="0.0" gas-prod-type="0" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="200" y="20" A="0.36833685461879695" B="-0.5" C="-0.5" D="0.25" LR="1.0" emiss-rate="0.01" emiss-radius="300"/>
+<gasneat-connection id="344" src-id="1" dest-id="0" weight="1.6808724918176383"/>
+<gasneat-connection id="835" src-id="0" dest-id="1" weight="-0.6791468858718872"/>
+<gasneat-neuron id="18496" type="hid" activation="linear" threshold="0.0" gas-prod-type="2" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="110" y="20" A="0.36833685461879695" B="-0.5" C="-0.5" D="0.25" LR="1.0" emiss-rate="0.16252674280768153" emiss-radius="300"/>
+<gasneat-connection id="18497" src-id="0" dest-id="18496" weight="0.17038273811340332"/>
+<gasneat-neuron id="18841" type="hid" activation="linear" threshold="0.0" gas-prod-type="3" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="110" y="20" A="0.36833685461879695" B="-0.5" C="-0.5" D="0.25" LR="1.0" emiss-rate="0.1" emiss-radius="300"/>
+<gasneat-connection id="18842" src-id="0" dest-id="18841" weight="-0.2328646975068831"/>
+<gasneat-neuron id="19500" type="hid" activation="linear" threshold="0.0" gas-prod-type="3" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="42" y="20" A="0.36833685461879695" B="-0.5" C="-0.5" D="0.25" LR="1.0" emiss-rate="0.1" emiss-radius="300"/>
+<gasneat-connection id="19501" src-id="0" dest-id="19500" weight="-1.4559008143138286"/>
+<gasneat-neuron id="24246" type="hid" activation="linear" threshold="0.0" gas-prod-type="1" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="132" y="20" A="0.36833685461879695" B="-0.5" C="-0.5" D="0.25" LR="1.0" emiss-rate="0.01" emiss-radius="300"/>
+<gasneat-connection id="24247" src-id="1" dest-id="24246" weight="-0.9276219606399536"/>
+</chromosome>

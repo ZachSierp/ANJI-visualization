@@ -1,0 +1,8 @@
+<chromosome id="24295" primary-parent-id="23591">
+<gasneat-neuron id="0" type="in" activation="linear" threshold="0.0" gas-prod-type="0" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="20" y="20" A="1.0" B="-0.5" C="-0.05288876202725895" D="0.25" LR="1.0" emiss-rate="0.25152929004891983" emiss-radius="300"/>
+<gasneat-neuron id="1" type="out" activation="linear" threshold="0.0" gas-prod-type="0" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="200" y="20" A="1.0" B="-0.5" C="-0.05288876202725895" D="0.25" LR="1.0" emiss-rate="0.11214720923118227" emiss-radius="300"/>
+<gasneat-neuron id="23452" type="hid" activation="linear" threshold="0.0" gas-prod-type="1" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="110" y="20" A="1.0" B="-0.5" C="-0.05288876202725895" D="0.25" LR="1.0" emiss-rate="0.1" emiss-radius="300"/>
+<gasneat-connection id="23453" src-id="0" dest-id="23452" weight="-0.6715958118438721"/>
+<gasneat-neuron id="24220" type="hid" activation="linear" threshold="0.0" gas-prod-type="2" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="65" y="20" A="1.0" B="-0.5" C="-0.05288876202725895" D="0.25" LR="1.0" emiss-rate="0.1" emiss-radius="300"/>
+<gasneat-connection id="24221" src-id="0" dest-id="24220" weight="-0.5200244188308716"/>
+</chromosome>

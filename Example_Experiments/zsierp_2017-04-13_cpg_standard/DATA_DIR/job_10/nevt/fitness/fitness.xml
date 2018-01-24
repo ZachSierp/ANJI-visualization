@@ -1,0 +1,797 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./graphFitnessRefresh.xsl" ?>
+<!DOCTYPE run SYSTEM "../run.dtd">
+<run name="0" timedatestamp="[20170413 12:59:15 - 20170413 12:59:16]" >
+<search-parameters>
+<population-size>100</population-size>
+<generations>100</generations>
+</search-parameters>
+<generation id="1" >
+<fitness>
+<max>864</max>
+<min>864</min>
+<avg>864</avg>
+</fitness>
+<complexity>
+<champ>2</champ>
+<max>2</max>
+<min>2</min>
+<avg>2.0</avg>
+</complexity>
+<specie id="2" count="100">
+<chromosome id="2" fitness="864" />
+<chromosome id="3" fitness="864" />
+<chromosome id="4" fitness="864" />
+<chromosome id="5" fitness="864" />
+<chromosome id="6" fitness="864" />
+<chromosome id="7" fitness="864" />
+<chromosome id="8" fitness="864" />
+<chromosome id="9" fitness="864" />
+<chromosome id="10" fitness="864" />
+<chromosome id="11" fitness="864" />
+<chromosome id="12" fitness="864" />
+<chromosome id="13" fitness="864" />
+<chromosome id="14" fitness="864" />
+<chromosome id="15" fitness="864" />
+<chromosome id="16" fitness="864" />
+<chromosome id="17" fitness="864" />
+<chromosome id="18" fitness="864" />
+<chromosome id="19" fitness="864" />
+<chromosome id="20" fitness="864" />
+<chromosome id="21" fitness="864" />
+<chromosome id="22" fitness="864" />
+<chromosome id="23" fitness="864" />
+<chromosome id="24" fitness="864" />
+<chromosome id="25" fitness="864" />
+<chromosome id="26" fitness="864" />
+<chromosome id="27" fitness="864" />
+<chromosome id="28" fitness="864" />
+<chromosome id="29" fitness="864" />
+<chromosome id="30" fitness="864" />
+<chromosome id="31" fitness="864" />
+<chromosome id="32" fitness="864" />
+<chromosome id="33" fitness="864" />
+<chromosome id="34" fitness="864" />
+<chromosome id="35" fitness="864" />
+<chromosome id="36" fitness="864" />
+<chromosome id="37" fitness="864" />
+<chromosome id="38" fitness="864" />
+<chromosome id="39" fitness="864" />
+<chromosome id="40" fitness="864" />
+<chromosome id="41" fitness="864" />
+<chromosome id="42" fitness="864" />
+<chromosome id="43" fitness="864" />
+<chromosome id="44" fitness="864" />
+<chromosome id="45" fitness="864" />
+<chromosome id="46" fitness="864" />
+<chromosome id="47" fitness="864" />
+<chromosome id="48" fitness="864" />
+<chromosome id="49" fitness="864" />
+<chromosome id="50" fitness="864" />
+<chromosome id="51" fitness="864" />
+<chromosome id="52" fitness="864" />
+<chromosome id="53" fitness="864" />
+<chromosome id="54" fitness="864" />
+<chromosome id="55" fitness="864" />
+<chromosome id="56" fitness="864" />
+<chromosome id="57" fitness="864" />
+<chromosome id="58" fitness="864" />
+<chromosome id="59" fitness="864" />
+<chromosome id="60" fitness="864" />
+<chromosome id="61" fitness="864" />
+<chromosome id="62" fitness="864" />
+<chromosome id="63" fitness="864" />
+<chromosome id="64" fitness="864" />
+<chromosome id="65" fitness="864" />
+<chromosome id="66" fitness="864" />
+<chromosome id="67" fitness="864" />
+<chromosome id="68" fitness="864" />
+<chromosome id="69" fitness="864" />
+<chromosome id="70" fitness="864" />
+<chromosome id="71" fitness="864" />
+<chromosome id="72" fitness="864" />
+<chromosome id="73" fitness="864" />
+<chromosome id="74" fitness="864" />
+<chromosome id="75" fitness="864" />
+<chromosome id="76" fitness="864" />
+<chromosome id="77" fitness="864" />
+<chromosome id="78" fitness="864" />
+<chromosome id="79" fitness="864" />
+<chromosome id="80" fitness="864" />
+<chromosome id="81" fitness="864" />
+<chromosome id="82" fitness="864" />
+<chromosome id="83" fitness="864" />
+<chromosome id="84" fitness="864" />
+<chromosome id="85" fitness="864" />
+<chromosome id="86" fitness="864" />
+<chromosome id="87" fitness="864" />
+<chromosome id="88" fitness="864" />
+<chromosome id="89" fitness="864" />
+<chromosome id="90" fitness="864" />
+<chromosome id="91" fitness="864" />
+<chromosome id="92" fitness="864" />
+<chromosome id="93" fitness="864" />
+<chromosome id="94" fitness="864" />
+<chromosome id="95" fitness="864" />
+<chromosome id="96" fitness="864" />
+<chromosome id="97" fitness="864" />
+<chromosome id="98" fitness="864" />
+<chromosome id="99" fitness="864" />
+<chromosome id="100" fitness="864" />
+<chromosome id="101" fitness="864" />
+</specie>
+</generation>
+<generation id="2" >
+<fitness>
+<max>864</max>
+<min>862</min>
+<avg>863</avg>
+</fitness>
+<complexity>
+<champ>2</champ>
+<max>4</max>
+<min>2</min>
+<avg>2.81</avg>
+</complexity>
+<specie id="2" count="59">
+<chromosome id="2" fitness="864" />
+<chromosome id="3" fitness="864" />
+<chromosome id="4" fitness="864" />
+<chromosome id="5" fitness="864" />
+<chromosome id="6" fitness="864" />
+<chromosome id="7" fitness="864" />
+<chromosome id="8" fitness="864" />
+<chromosome id="9" fitness="864" />
+<chromosome id="10" fitness="864" />
+<chromosome id="11" fitness="864" />
+<chromosome id="12" fitness="864" />
+<chromosome id="13" fitness="864" />
+<chromosome id="14" fitness="864" />
+<chromosome id="15" fitness="864" />
+<chromosome id="16" fitness="864" />
+<chromosome id="17" fitness="864" />
+<chromosome id="18" fitness="864" />
+<chromosome id="19" fitness="864" />
+<chromosome id="20" fitness="864" />
+<chromosome id="21" fitness="864" />
+<chromosome id="268" fitness="864" />
+<chromosome id="269" fitness="864" />
+<chromosome id="270" fitness="864" />
+<chromosome id="272" fitness="864" />
+<chromosome id="274" fitness="864" />
+<chromosome id="275" fitness="864" />
+<chromosome id="276" fitness="864" />
+<chromosome id="279" fitness="864" />
+<chromosome id="280" fitness="864" />
+<chromosome id="283" fitness="864" />
+<chromosome id="284" fitness="864" />
+<chromosome id="285" fitness="864" />
+<chromosome id="287" fitness="864" />
+<chromosome id="289" fitness="864" />
+<chromosome id="291" fitness="864" />
+<chromosome id="292" fitness="864" />
+<chromosome id="293" fitness="864" />
+<chromosome id="294" fitness="864" />
+<chromosome id="295" fitness="864" />
+<chromosome id="298" fitness="864" />
+<chromosome id="301" fitness="864" />
+<chromosome id="302" fitness="864" />
+<chromosome id="305" fitness="864" />
+<chromosome id="312" fitness="864" />
+<chromosome id="313" fitness="864" />
+<chromosome id="315" fitness="864" />
+<chromosome id="316" fitness="864" />
+<chromosome id="318" fitness="864" />
+<chromosome id="319" fitness="864" />
+<chromosome id="323" fitness="864" />
+<chromosome id="330" fitness="864" />
+<chromosome id="333" fitness="864" />
+<chromosome id="336" fitness="864" />
+<chromosome id="339" fitness="864" />
+<chromosome id="340" fitness="864" />
+<chromosome id="342" fitness="864" />
+<chromosome id="344" fitness="864" />
+<chromosome id="345" fitness="864" />
+<chromosome id="346" fitness="864" />
+</specie>
+<specie id="271" count="1">
+<chromosome id="271" fitness="862" />
+</specie>
+<specie id="273" count="1">
+<chromosome id="273" fitness="862" />
+</specie>
+<specie id="277" count="1">
+<chromosome id="277" fitness="862" />
+</specie>
+<specie id="278" count="1">
+<chromosome id="278" fitness="862" />
+</specie>
+<specie id="281" count="1">
+<chromosome id="281" fitness="862" />
+</specie>
+<specie id="282" count="1">
+<chromosome id="282" fitness="862" />
+</specie>
+<specie id="286" count="1">
+<chromosome id="286" fitness="862" />
+</specie>
+<specie id="288" count="1">
+<chromosome id="288" fitness="862" />
+</specie>
+<specie id="290" count="1">
+<chromosome id="290" fitness="862" />
+</specie>
+<specie id="296" count="1">
+<chromosome id="296" fitness="862" />
+</specie>
+<specie id="297" count="1">
+<chromosome id="297" fitness="862" />
+</specie>
+<specie id="299" count="1">
+<chromosome id="299" fitness="862" />
+</specie>
+<specie id="300" count="1">
+<chromosome id="300" fitness="862" />
+</specie>
+<specie id="303" count="1">
+<chromosome id="303" fitness="862" />
+</specie>
+<specie id="304" count="1">
+<chromosome id="304" fitness="862" />
+</specie>
+<specie id="306" count="1">
+<chromosome id="306" fitness="862" />
+</specie>
+<specie id="307" count="1">
+<chromosome id="307" fitness="862" />
+</specie>
+<specie id="308" count="1">
+<chromosome id="308" fitness="862" />
+</specie>
+<specie id="309" count="1">
+<chromosome id="309" fitness="862" />
+</specie>
+<specie id="310" count="1">
+<chromosome id="310" fitness="862" />
+</specie>
+<specie id="311" count="1">
+<chromosome id="311" fitness="862" />
+</specie>
+<specie id="314" count="1">
+<chromosome id="314" fitness="862" />
+</specie>
+<specie id="317" count="1">
+<chromosome id="317" fitness="863" />
+</specie>
+<specie id="320" count="1">
+<chromosome id="320" fitness="862" />
+</specie>
+<specie id="321" count="1">
+<chromosome id="321" fitness="862" />
+</specie>
+<specie id="322" count="1">
+<chromosome id="322" fitness="862" />
+</specie>
+<specie id="324" count="1">
+<chromosome id="324" fitness="862" />
+</specie>
+<specie id="325" count="1">
+<chromosome id="325" fitness="862" />
+</specie>
+<specie id="326" count="1">
+<chromosome id="326" fitness="862" />
+</specie>
+<specie id="327" count="1">
+<chromosome id="327" fitness="862" />
+</specie>
+<specie id="328" count="1">
+<chromosome id="328" fitness="862" />
+</specie>
+<specie id="329" count="1">
+<chromosome id="329" fitness="862" />
+</specie>
+<specie id="331" count="1">
+<chromosome id="331" fitness="862" />
+</specie>
+<specie id="332" count="1">
+<chromosome id="332" fitness="862" />
+</specie>
+<specie id="334" count="1">
+<chromosome id="334" fitness="862" />
+</specie>
+<specie id="335" count="1">
+<chromosome id="335" fitness="862" />
+</specie>
+<specie id="337" count="1">
+<chromosome id="337" fitness="862" />
+</specie>
+<specie id="338" count="1">
+<chromosome id="338" fitness="862" />
+</specie>
+<specie id="341" count="1">
+<chromosome id="341" fitness="862" />
+</specie>
+<specie id="343" count="1">
+<chromosome id="343" fitness="862" />
+</specie>
+<specie id="347" count="1">
+<chromosome id="347" fitness="862" />
+</specie>
+</generation>
+<generation id="3" >
+<fitness>
+<max>864</max>
+<min>860</min>
+<avg>861</avg>
+</fitness>
+<complexity>
+<champ>2</champ>
+<max>6</max>
+<min>2</min>
+<avg>4.59</avg>
+</complexity>
+<specie id="2" count="4">
+<chromosome id="2" fitness="864" />
+<chromosome id="533" fitness="864" />
+<chromosome id="542" fitness="864" />
+<chromosome id="561" fitness="864" />
+</specie>
+<specie id="317" count="2">
+<chromosome id="317" fitness="863" />
+<chromosome id="581" fitness="863" />
+</specie>
+<specie id="320" count="2">
+<chromosome id="320" fitness="862" />
+<chromosome id="522" fitness="862" />
+</specie>
+<specie id="321" count="2">
+<chromosome id="321" fitness="862" />
+<chromosome id="532" fitness="862" />
+</specie>
+<specie id="322" count="3">
+<chromosome id="322" fitness="862" />
+<chromosome id="540" fitness="862" />
+<chromosome id="585" fitness="862" />
+</specie>
+<specie id="324" count="3">
+<chromosome id="324" fitness="862" />
+<chromosome id="535" fitness="862" />
+<chromosome id="550" fitness="862" />
+</specie>
+<specie id="325" count="2">
+<chromosome id="325" fitness="862" />
+<chromosome id="552" fitness="862" />
+</specie>
+<specie id="326" count="1">
+<chromosome id="326" fitness="862" />
+</specie>
+<specie id="327" count="2">
+<chromosome id="327" fitness="862" />
+<chromosome id="568" fitness="862" />
+</specie>
+<specie id="328" count="3">
+<chromosome id="328" fitness="862" />
+<chromosome id="538" fitness="862" />
+<chromosome id="562" fitness="862" />
+</specie>
+<specie id="329" count="3">
+<chromosome id="329" fitness="862" />
+<chromosome id="545" fitness="862" />
+<chromosome id="582" fitness="862" />
+</specie>
+<specie id="331" count="4">
+<chromosome id="331" fitness="862" />
+<chromosome id="527" fitness="862" />
+<chromosome id="543" fitness="862" />
+<chromosome id="579" fitness="862" />
+</specie>
+<specie id="332" count="3">
+<chromosome id="332" fitness="862" />
+<chromosome id="544" fitness="862" />
+<chromosome id="567" fitness="862" />
+</specie>
+<specie id="334" count="2">
+<chromosome id="334" fitness="862" />
+<chromosome id="578" fitness="862" />
+</specie>
+<specie id="335" count="3">
+<chromosome id="335" fitness="862" />
+<chromosome id="521" fitness="862" />
+<chromosome id="574" fitness="862" />
+</specie>
+<specie id="337" count="2">
+<chromosome id="337" fitness="862" />
+<chromosome id="586" fitness="862" />
+</specie>
+<specie id="338" count="2">
+<chromosome id="338" fitness="862" />
+<chromosome id="588" fitness="862" />
+</specie>
+<specie id="341" count="5">
+<chromosome id="341" fitness="862" />
+<chromosome id="514" fitness="862" />
+<chromosome id="517" fitness="862" />
+<chromosome id="560" fitness="862" />
+<chromosome id="572" fitness="862" />
+</specie>
+<specie id="343" count="5">
+<chromosome id="343" fitness="862" />
+<chromosome id="546" fitness="862" />
+<chromosome id="547" fitness="862" />
+<chromosome id="575" fitness="862" />
+<chromosome id="587" fitness="862" />
+</specie>
+<specie id="347" count="3">
+<chromosome id="347" fitness="862" />
+<chromosome id="541" fitness="862" />
+<chromosome id="580" fitness="862" />
+</specie>
+<specie id="513" count="1">
+<chromosome id="513" fitness="860" />
+</specie>
+<specie id="515" count="1">
+<chromosome id="515" fitness="860" />
+</specie>
+<specie id="516" count="1">
+<chromosome id="516" fitness="861" />
+</specie>
+<specie id="518" count="1">
+<chromosome id="518" fitness="860" />
+</specie>
+<specie id="519" count="1">
+<chromosome id="519" fitness="860" />
+</specie>
+<specie id="520" count="1">
+<chromosome id="520" fitness="860" />
+</specie>
+<specie id="523" count="1">
+<chromosome id="523" fitness="860" />
+</specie>
+<specie id="524" count="1">
+<chromosome id="524" fitness="860" />
+</specie>
+<specie id="525" count="1">
+<chromosome id="525" fitness="861" />
+</specie>
+<specie id="526" count="1">
+<chromosome id="526" fitness="860" />
+</specie>
+<specie id="528" count="1">
+<chromosome id="528" fitness="860" />
+</specie>
+<specie id="529" count="1">
+<chromosome id="529" fitness="860" />
+</specie>
+<specie id="530" count="1">
+<chromosome id="530" fitness="860" />
+</specie>
+<specie id="531" count="1">
+<chromosome id="531" fitness="862" />
+</specie>
+<specie id="534" count="1">
+<chromosome id="534" fitness="860" />
+</specie>
+<specie id="536" count="1">
+<chromosome id="536" fitness="861" />
+</specie>
+<specie id="537" count="1">
+<chromosome id="537" fitness="860" />
+</specie>
+<specie id="539" count="1">
+<chromosome id="539" fitness="860" />
+</specie>
+<specie id="548" count="1">
+<chromosome id="548" fitness="860" />
+</specie>
+<specie id="549" count="1">
+<chromosome id="549" fitness="862" />
+</specie>
+<specie id="551" count="1">
+<chromosome id="551" fitness="862" />
+</specie>
+<specie id="553" count="1">
+<chromosome id="553" fitness="860" />
+</specie>
+<specie id="554" count="1">
+<chromosome id="554" fitness="860" />
+</specie>
+<specie id="555" count="1">
+<chromosome id="555" fitness="860" />
+</specie>
+<specie id="556" count="1">
+<chromosome id="556" fitness="862" />
+</specie>
+<specie id="557" count="1">
+<chromosome id="557" fitness="860" />
+</specie>
+<specie id="558" count="1">
+<chromosome id="558" fitness="860" />
+</specie>
+<specie id="559" count="1">
+<chromosome id="559" fitness="860" />
+</specie>
+<specie id="563" count="1">
+<chromosome id="563" fitness="862" />
+</specie>
+<specie id="564" count="1">
+<chromosome id="564" fitness="860" />
+</specie>
+<specie id="565" count="1">
+<chromosome id="565" fitness="862" />
+</specie>
+<specie id="566" count="1">
+<chromosome id="566" fitness="862" />
+</specie>
+<specie id="569" count="1">
+<chromosome id="569" fitness="860" />
+</specie>
+<specie id="570" count="1">
+<chromosome id="570" fitness="860" />
+</specie>
+<specie id="571" count="1">
+<chromosome id="571" fitness="860" />
+</specie>
+<specie id="573" count="1">
+<chromosome id="573" fitness="860" />
+</specie>
+<specie id="576" count="1">
+<chromosome id="576" fitness="860" />
+</specie>
+<specie id="577" count="1">
+<chromosome id="577" fitness="860" />
+</specie>
+<specie id="583" count="1">
+<chromosome id="583" fitness="862" />
+</specie>
+<specie id="584" count="1">
+<chromosome id="584" fitness="860" />
+</specie>
+<specie id="589" count="1">
+<chromosome id="589" fitness="860" />
+</specie>
+<specie id="590" count="1">
+<chromosome id="590" fitness="860" />
+</specie>
+<specie id="591" count="1">
+<chromosome id="591" fitness="860" />
+</specie>
+<specie id="592" count="1">
+<chromosome id="592" fitness="860" />
+</specie>
+</generation>
+<generation id="4" >
+<fitness>
+<max>864</max>
+<min>858</min>
+<avg>861</avg>
+</fitness>
+<complexity>
+<champ>2</champ>
+<max>8</max>
+<min>2</min>
+<avg>4.61</avg>
+</complexity>
+<specie id="2" count="5">
+<chromosome id="2" fitness="864" />
+<chromosome id="804" fitness="864" />
+<chromosome id="817" fitness="864" />
+<chromosome id="829" fitness="864" />
+<chromosome id="838" fitness="864" />
+</specie>
+<specie id="317" count="2">
+<chromosome id="317" fitness="863" />
+<chromosome id="775" fitness="863" />
+</specie>
+<specie id="329" count="1">
+<chromosome id="329" fitness="862" />
+</specie>
+<specie id="331" count="5">
+<chromosome id="331" fitness="862" />
+<chromosome id="781" fitness="862" />
+<chromosome id="792" fitness="862" />
+<chromosome id="794" fitness="862" />
+<chromosome id="836" fitness="862" />
+</specie>
+<specie id="332" count="3">
+<chromosome id="332" fitness="862" />
+<chromosome id="779" fitness="862" />
+<chromosome id="826" fitness="862" />
+</specie>
+<specie id="334" count="3">
+<chromosome id="334" fitness="862" />
+<chromosome id="813" fitness="862" />
+<chromosome id="822" fitness="862" />
+</specie>
+<specie id="335" count="3">
+<chromosome id="335" fitness="862" />
+<chromosome id="795" fitness="862" />
+<chromosome id="834" fitness="862" />
+</specie>
+<specie id="337" count="2">
+<chromosome id="337" fitness="862" />
+<chromosome id="809" fitness="862" />
+</specie>
+<specie id="338" count="2">
+<chromosome id="338" fitness="862" />
+<chromosome id="774" fitness="862" />
+</specie>
+<specie id="341" count="2">
+<chromosome id="341" fitness="862" />
+<chromosome id="797" fitness="862" />
+</specie>
+<specie id="343" count="5">
+<chromosome id="343" fitness="862" />
+<chromosome id="768" fitness="862" />
+<chromosome id="771" fitness="862" />
+<chromosome id="815" fitness="862" />
+<chromosome id="840" fitness="862" />
+</specie>
+<specie id="347" count="2">
+<chromosome id="347" fitness="862" />
+<chromosome id="784" fitness="862" />
+</specie>
+<specie id="531" count="2">
+<chromosome id="531" fitness="862" />
+<chromosome id="763" fitness="862" />
+</specie>
+<specie id="549" count="4">
+<chromosome id="549" fitness="862" />
+<chromosome id="769" fitness="862" />
+<chromosome id="787" fitness="862" />
+<chromosome id="812" fitness="862" />
+</specie>
+<specie id="551" count="3">
+<chromosome id="551" fitness="862" />
+<chromosome id="798" fitness="862" />
+<chromosome id="802" fitness="862" />
+</specie>
+<specie id="556" count="3">
+<chromosome id="556" fitness="862" />
+<chromosome id="803" fitness="862" />
+<chromosome id="833" fitness="862" />
+</specie>
+<specie id="563" count="1">
+<chromosome id="563" fitness="862" />
+</specie>
+<specie id="565" count="4">
+<chromosome id="565" fitness="862" />
+<chromosome id="765" fitness="862" />
+<chromosome id="832" fitness="862" />
+<chromosome id="842" fitness="862" />
+</specie>
+<specie id="566" count="2">
+<chromosome id="566" fitness="862" />
+<chromosome id="801" fitness="862" />
+</specie>
+<specie id="583" count="5">
+<chromosome id="583" fitness="862" />
+<chromosome id="776" fitness="862" />
+<chromosome id="778" fitness="862" />
+<chromosome id="786" fitness="862" />
+<chromosome id="824" fitness="862" />
+</specie>
+<specie id="764" count="1">
+<chromosome id="764" fitness="860" />
+</specie>
+<specie id="766" count="1">
+<chromosome id="766" fitness="860" />
+</specie>
+<specie id="767" count="1">
+<chromosome id="767" fitness="858" />
+</specie>
+<specie id="770" count="1">
+<chromosome id="770" fitness="860" />
+</specie>
+<specie id="772" count="1">
+<chromosome id="772" fitness="860" />
+</specie>
+<specie id="773" count="1">
+<chromosome id="773" fitness="860" />
+</specie>
+<specie id="777" count="1">
+<chromosome id="777" fitness="860" />
+</specie>
+<specie id="780" count="1">
+<chromosome id="780" fitness="860" />
+</specie>
+<specie id="782" count="1">
+<chromosome id="782" fitness="861" />
+</specie>
+<specie id="783" count="1">
+<chromosome id="783" fitness="862" />
+</specie>
+<specie id="785" count="1">
+<chromosome id="785" fitness="860" />
+</specie>
+<specie id="788" count="1">
+<chromosome id="788" fitness="860" />
+</specie>
+<specie id="789" count="1">
+<chromosome id="789" fitness="860" />
+</specie>
+<specie id="790" count="1">
+<chromosome id="790" fitness="860" />
+</specie>
+<specie id="791" count="1">
+<chromosome id="791" fitness="860" />
+</specie>
+<specie id="793" count="1">
+<chromosome id="793" fitness="861" />
+</specie>
+<specie id="796" count="1">
+<chromosome id="796" fitness="860" />
+</specie>
+<specie id="799" count="1">
+<chromosome id="799" fitness="860" />
+</specie>
+<specie id="800" count="1">
+<chromosome id="800" fitness="860" />
+</specie>
+<specie id="805" count="1">
+<chromosome id="805" fitness="862" />
+</specie>
+<specie id="806" count="1">
+<chromosome id="806" fitness="860" />
+</specie>
+<specie id="807" count="1">
+<chromosome id="807" fitness="861" />
+</specie>
+<specie id="808" count="1">
+<chromosome id="808" fitness="860" />
+</specie>
+<specie id="810" count="1">
+<chromosome id="810" fitness="858" />
+</specie>
+<specie id="811" count="1">
+<chromosome id="811" fitness="860" />
+</specie>
+<specie id="814" count="1">
+<chromosome id="814" fitness="860" />
+</specie>
+<specie id="816" count="1">
+<chromosome id="816" fitness="860" />
+</specie>
+<specie id="818" count="1">
+<chromosome id="818" fitness="858" />
+</specie>
+<specie id="819" count="1">
+<chromosome id="819" fitness="862" />
+</specie>
+<specie id="820" count="1">
+<chromosome id="820" fitness="862" />
+</specie>
+<specie id="821" count="1">
+<chromosome id="821" fitness="860" />
+</specie>
+<specie id="823" count="1">
+<chromosome id="823" fitness="860" />
+</specie>
+<specie id="825" count="1">
+<chromosome id="825" fitness="860" />
+</specie>
+<specie id="827" count="1">
+<chromosome id="827" fitness="860" />
+</specie>
+<specie id="828" count="1">
+<chromosome id="828" fitness="860" />
+</specie>
+<specie id="830" count="1">
+<chromosome id="830" fitness="860" />
+</specie>
+<specie id="831" count="1">
+<chromosome id="831" fitness="862" />
+</specie>
+<specie id="835" count="1">
+<chromosome id="835" fitness="860" />
+</specie>
+<specie id="837" count="1">
+<chromosome id="837" fitness="862" />
+</specie>
+<specie id="839" count="1">
+<chromosome id="839" fitness="860" />
+</specie>
+<specie id="841" count="1">
+<chromosome id="841" fitness="860" />
+</specie>
+</generation>
+</run>

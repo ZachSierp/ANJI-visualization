@@ -1,0 +1,14 @@
+<chromosome id="24405" primary-parent-id="23861">
+<gasneat-neuron id="0" type="in" activation="linear" threshold="0.0" gas-prod-type="0" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="20" y="20" A="1.0" B="-0.5" C="-0.5" D="0.49592241049498365" LR="1.0" emiss-rate="0.040229004736010265" emiss-radius="300"/>
+<gasneat-neuron id="1" type="out" activation="linear" threshold="0.0" gas-prod-type="0" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="200" y="20" A="1.0" B="-0.5" C="-0.5" D="0.49592241049498365" LR="1.0" emiss-rate="0.21102874038102845" emiss-radius="300"/>
+<gasneat-connection id="102" src-id="0" dest-id="1" weight="-0.48653388023376465"/>
+<gasneat-connection id="596" src-id="1" dest-id="1" weight="-0.9469375610351562"/>
+<gasneat-neuron id="22303" type="hid" activation="linear" threshold="0.0" gas-prod-type="0" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="188" y="20" A="1.0" B="-0.5" C="-0.5" D="0.49592241049498365" LR="1.0" emiss-rate="0.1" emiss-radius="300"/>
+<gasneat-connection id="22304" src-id="1" dest-id="22303" weight="-0.001165628433227539"/>
+<gasneat-neuron id="22795" type="hid" activation="linear" threshold="0.0" gas-prod-type="3" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="182" y="20" A="1.0" B="-0.5" C="-0.5" D="0.49592241049498365" LR="1.0" emiss-rate="0.1" emiss-radius="300"/>
+<gasneat-connection id="22796" src-id="22303" dest-id="22795" weight="0.7726378440856934"/>
+<gasneat-neuron id="23744" type="hid" activation="linear" threshold="0.0" gas-prod-type="0" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="194" y="20" A="1.0" B="-0.5" C="-0.5" D="0.49592241049498365" LR="1.0" emiss-rate="0.14297740358292488" emiss-radius="300"/>
+<gasneat-connection id="23745" src-id="22303" dest-id="23744" weight="2.7887458926101742"/>
+<gasneat-neuron id="24262" type="hid" activation="linear" threshold="0.0" gas-prod-type="0" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="194" y="20" A="1.0" B="-0.5" C="-0.5" D="0.49592241049498365" LR="1.0" emiss-rate="0.1" emiss-radius="300"/>
+<gasneat-connection id="24263" src-id="1" dest-id="24262" weight="0.7138392925262451"/>
+</chromosome>

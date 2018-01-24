@@ -1,0 +1,5 @@
+USER: zsierp
+DATE: Thu Apr 13 12:58:24 EDT 2017
+DESCRIPTION: Standard CPG with gas modulation
+PROPERTIES_FILE: UROC_TEMPLATES/cpg_standard.properties
+PARAMETERS_FILE: UROC_PARAMETERS/parameter_list_demo.csv

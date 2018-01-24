@@ -1,0 +1,7 @@
+USER: jasoyode
+DATE: Thu Apr 27 18:23:29 EDT 2017
+SHORT_NAME: jasoyode_2017-04-27_cpg_10_4_arch_act_bias
+LOCATION: /scratch/jasoyode/EXPERIMENTS/EXPERIMENTS/jasoyode_2017-04-27_cpg_10_4_arch_act_bias
+DESCRIPTION: Running a 10_4 cpg task comparing the architecures, biases, and activation functions to see what is important towards completing this task successfully. Also testing to see that the workflow is all appropriate. Now I just wait for an email hopefully!
+PROPERTIES_FILE: TEMPLATES/cpg_10_4_template.properties
+PARAMETERS_FILE: PARAMETERS/cpg_10_4_parameters.csv

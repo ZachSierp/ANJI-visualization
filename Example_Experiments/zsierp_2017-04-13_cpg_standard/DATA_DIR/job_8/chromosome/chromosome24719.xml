@@ -1,0 +1,14 @@
+<chromosome id="24719" primary-parent-id="24272">
+<gasneat-neuron id="0" type="in" activation="linear" threshold="0.0" gas-prod-type="0" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="20" y="20" A="1.0" B="-0.5433051548821882" C="-0.5" D="0.25" LR="1.0" emiss-rate="0.33876665176589515" emiss-radius="300"/>
+<gasneat-neuron id="1" type="out" activation="linear" threshold="0.0" gas-prod-type="0" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="200" y="20" A="1.0" B="-0.5433051548821882" C="-0.5" D="0.25" LR="1.0" emiss-rate="0.2759335318492834" emiss-radius="300"/>
+<gasneat-connection id="104" src-id="0" dest-id="1" weight="-0.8754383227171245"/>
+<gasneat-connection id="345" src-id="1" dest-id="1" weight="-0.6106618108165436"/>
+<gasneat-neuron id="5164" type="hid" activation="linear" threshold="0.0" gas-prod-type="0" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="183" y="20" A="1.0" B="-0.5433051548821882" C="-0.5" D="0.25" LR="1.0" emiss-rate="0.1" emiss-radius="300"/>
+<gasneat-connection id="5165" src-id="1" dest-id="5164" weight="0.15429139137268066"/>
+<gasneat-neuron id="8463" type="hid" activation="linear" threshold="0.0" gas-prod-type="1" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="101" y="20" A="1.0" B="-0.5433051548821882" C="-0.5" D="0.25" LR="1.0" emiss-rate="0.2773951261513014" emiss-radius="300"/>
+<gasneat-connection id="8464" src-id="5164" dest-id="8463" weight="-0.7561849355697632"/>
+<gasneat-neuron id="24103" type="hid" activation="linear" threshold="0.0" gas-prod-type="0" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="101" y="20" A="1.0" B="-0.5433051548821882" C="-0.5" D="0.25" LR="1.0" emiss-rate="0.1" emiss-radius="300"/>
+<gasneat-connection id="24104" src-id="0" dest-id="24103" weight="-0.1511836051940918"/>
+<gasneat-neuron id="24680" type="hid" activation="linear" threshold="0.0" gas-prod-type="3" syn-gas-type="0" receptor="G0_G1_G2_G3_G4" x="60" y="20" A="1.0" B="-0.5433051548821882" C="-0.5" D="0.25" LR="1.0" emiss-rate="0.062335211791457616" emiss-radius="300"/>
+<gasneat-connection id="24681" src-id="24103" dest-id="24680" weight="-0.26575446128845215"/>
+</chromosome>
