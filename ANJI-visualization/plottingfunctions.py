@@ -10,6 +10,7 @@ import os
 import re
 import warnings
 import numpy as np
+import sys
 
 # we need to define these variables first so we can have access to them in the functions below
 show_plots = False
@@ -48,6 +49,11 @@ show_bar_graphs = False
 # default color is gray
 bar_ecolor = (0.82, 0.82, 0.82, 1.0)
 agg_ls = 'solid'
+python_Version = 0
+if (sys.version_info[0] < 3):
+	python_Version = 2
+else:
+	python_Version = 3
 
 # generate the seed for random
 random.seed()
@@ -329,11 +335,19 @@ def plot_bar_graph(title, save_loc, filename, vals, labels, colors, devs, data_t
         for tick in ax.get_xticklabels():
             tick.set_rotation(45)
 
+        plus_minus = 'a'
+        if(python_Version == 2):
+            plus_minus = unichr(177) # Version 2 conversion
+        else:
+            plus_minus = chr(177) # Version 3 conversion
+
         for i in range(len(rects)):
             rect = rects[i]
             height = rect.get_height()
+			# set to default character
+
             ax.text(rect.get_x() + rect.get_width()/2., height + bar_deviation[i],
-                '%c%d' % (unichr(177),  bar_deviation[i]), ha='center', va='bottom')
+                '%c%d' % (plus_minus,  bar_deviation[i]), ha='center', va='bottom')
             ax.text(rect.get_x(), height, '%d' % height, ha='center', va='bottom')
 
         # fig.set_size_inches(8, 8)
